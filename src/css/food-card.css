@@ -24,7 +24,7 @@
   /* Остальные ваши стили без изменений */
   border-radius: 12px;
   padding: 25px;
-  max-width: 750px;
+  width: 750px;
   position: relative;
   transition: all 0.4s ease;
   box-shadow: 0 10px 30px rgba(0,0,0,0.8);

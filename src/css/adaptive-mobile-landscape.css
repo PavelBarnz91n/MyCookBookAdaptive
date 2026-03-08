@@ -171,6 +171,10 @@
     }
 
     /* 4.3 Карточки блюд */
+    .food-card {
+        width: 80%;
+    }
+    
     .food-img img {
         width: 180px;
         height: 150px;
