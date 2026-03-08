@@ -1,0 +1,36 @@
+.social-networks-left-panel {
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.social-networks-left-panel__wraper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+    
+    /* Эффект матового стекла */
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);
+    
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.icon-sn {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Эффекты при наведении */
+.icon-sn:hover {
+    transform: scale(1.2) translateX(5px); /* Увеличивается и чуть сдвигается вправо */
+    filter: drop-shadow(0 0 8px #f0cc57); /* Твое фирменное золотистое свечение */
+}

@@ -1,0 +1,49 @@
+.mcb__menu-box {
+    width: 94%;
+    margin: 20px auto 10px;
+    padding: 12px 0;
+    border-radius: 25px;
+    background: linear-gradient(145deg, rgba(78, 53, 30, 0.8), rgba(58, 38, 20, 0.9));
+    box-shadow: 0 0px 15px 3px rgb(255, 198, 74);
+    border: 1px solid rgba(255, 198, 74, 0.1);
+}
+
+.mcb__menu-tag-box {
+    list-style-type: none;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mcb__menu-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: rgba(255, 232, 156, 0.75);
+    cursor: pointer;
+    position: relative; /* Для позиционирования линии */
+    transition: all 0.3s ease;
+}
+
+.mcb__menu-tag::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #f0cc57;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    box-shadow: 0 0 8px rgba(240, 204, 87, 0.6);
+}
+
+.mcb__menu-tag:hover {
+    color: #ffe078;
+    text-shadow: 0 0 10px rgba(255, 224, 120, 0.3);
+}
+
+.mcb__menu-tag:hover::after {
+    width: 100%;
+}

@@ -1,0 +1,232 @@
+/* 
+1. Боковая панель с соц. сетями
+2. Header
+    2.1 Профиль
+    2.2 Строка поиска
+    2.3 Логотип
+3. Меню
+4. Бокс с контентом и сайдбаром
+    4.1 Сайдбар
+    4.2 Основной конент
+    4.3 Карточки блюд 
+5. Подвал
+    5.1 Социальные сети в подвале
+    5.2 Форма подписки
+    5.3 Бокс с автором 
+*/
+@media screen and (max-height: 450px) and (orientation: landscape) {
+    .mcb__wraper {
+        width: 100%;
+        height: 100vh;
+
+        position: relative;
+    }
+
+    /* 1. Боковая панель с соц. сетями */
+    .social-networks-left-panel__wraper {
+        padding: 7px;
+    }
+
+    .icon-sn {
+        width: 25px;
+        height: 25px;
+    }
+
+    /* 2. Header */
+    .mcb__header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* 2.1 Профиль */
+    .mcb__profile-box {
+        display: flex;
+        position: fixed;
+        bottom: 9%;
+        left: 3%;
+
+        z-index: 999;
+    }
+
+    .mcb__profile-box:hover {
+        transform: translateX(0);
+    }
+
+    /* 2.2 Строка поиска */
+    .mcb__search__input {
+        padding: 2px 5px;
+        font-size: 14px;
+    }
+
+    /* 2.3 Логотип */
+    .mcb__logo-box__top-text, 
+    .mcb__logo-bottom-text {
+        margin: 2px;
+        font-size: 14px;
+    }
+
+    .mcb__logo-box__name {
+        font-size: 32px;
+    }
+
+    .mcb__logo-box__name::before,
+    .mcb__logo-box__name::after {
+        margin: 3px 0;
+    }
+
+    /* 3. Меню */
+    .mcb__menu-box {
+        width: 95%; 
+        border-radius: 25px; 
+        margin: 10px 0 0 0;
+        padding: 0px 0;
+        box-sizing: border-box;
+    }
+
+    .mcb__menu-tag-box {
+        justify-content: flex-start; 
+        overflow-x: auto; 
+        padding: 0 20px; 
+        gap: 25px; 
+        
+        
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .mcb__menu-tag-box::-webkit-scrollbar {
+        display: none;
+    }
+
+    .mcb__menu-tag {
+        font-size: 15px; 
+        white-space: nowrap; 
+        flex-shrink: 0;
+    }
+    
+    .mcb__menu-tag {
+        padding: 5px 0;
+    }
+
+    /* 4. Бокс с контентом и сайдбаром */
+    .mcb__content-box {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        
+    }
+    /* 4.1 Сайдбар */
+    .content-box__sidebar-box {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+        border-radius: 0;
+        padding: 10px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-sizing: border-box;
+    }
+
+    .sidebar-box__title {
+        display: none;
+    }
+
+    .sidebar-box__sidebar {
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .sidebar-box__sidebar::-webkit-scrollbar {
+        display: none;
+    }
+    .sidebar-box__sidebar {
+        -ms-overflow-style: none;  /* для IE и Edge */
+        scrollbar-width: none;  /* для Firefox */
+    }
+
+    .sidebar__item {
+        white-space: nowrap;
+        flex-shrink: 0;
+        padding: 8px 15px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(240, 204, 87, 0.2);
+        font-size: 13px;
+        transform: none !important;
+    }
+
+    .sidebar__item:hover {
+        transform: none;
+    }
+
+    /* 4.2 Основной конент */
+    .content-box__content {
+        width: 100%;
+    }
+
+    /* 4.3 Карточки блюд */
+    .food-img img {
+        width: 180px;
+        height: 150px;
+    }
+
+    /* 5. Подвал */
+    .footer {
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(44, 30, 18, 0.95), rgba(26, 17, 10, 1));
+        padding: 5px 0 10px;
+        margin-top: 10px;
+        box-sizing: border-box;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* 5.1 Социальные сети в подвале */
+    .footer__social-networks {
+        display: none;
+    }
+
+    /* 5.2 Форма подписки */
+    .subscribe-form-box__title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .subscribe-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .subscribe-form input,
+    .subscribe-form input[type="email"] {
+        padding: 4px 8px;
+        width: 70%;
+    }
+
+    .subscribe-form button {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    .check-box__terms {
+        font-size: 10px;
+    }
+
+    /* 5.3 Бокс с автором */
+    .footer__author-box {
+        margin-top: 4px;
+        padding-top: 6px;
+        font-size: 12px;
+    }
+}
+

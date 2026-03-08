@@ -1,0 +1,76 @@
+.mcb__content-box {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+}
+
+.content-box__content {
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.content-box__sidebar-box {
+    width: 20%;
+    min-width: 200px;
+    color: #f0cc57;
+    
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    border-radius: 20px;
+    margin-left: 10px;
+    padding: 20px 0;
+
+    background: linear-gradient(145deg, rgba(78, 53, 30, 0.92), rgba(58, 38, 20, 0.95));
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(240, 204, 87, 0.1);
+}
+
+.sidebar-box__title {
+    width: 80%;
+    align-self: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #f0cc57;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.sidebar-box__sidebar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Расстояние между пунктами (вместо margin у li) */
+}
+
+.sidebar__item {
+    color: rgba(255, 232, 156, 0.7); /* Чуть прозрачнее в обычном состоянии */
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap; /* Чтобы длинные названия не переносились некрасиво */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.sidebar__item:hover {
+    color: #f0cc57;
+    background: rgba(255, 255, 255, 0.05); /* Легкий блик на фоне */
+    transform: translateX(10px); /* Вместо scale используем сдвиг вправо — это выглядит более стильно для меню */
+    text-shadow: 0 0 8px rgba(240, 204, 87, 0.4);
+}

@@ -1,0 +1,109 @@
+:root {
+  --deep-dark: #0f0f0f; /* Глубокий черный для контраста */
+  --gold-text: #c5a059; /* Золотой из вашего бокового меню */
+  --accent-red: #8b0000; /* Приглушенный красный */
+  --card-border: rgba(197, 160, 89, 0.15);
+}
+
+.food-card {
+  display: flex;
+  /* 1. Заменяем HEX-цвета на RGBA с прозрачностью (0.3 - 0.5) */
+  background: linear-gradient(
+    145deg, 
+    rgba(100, 100, 100, 0.2), /* Светлый блик сверху */
+    rgba(44, 44, 44, 0.4)     /* Темная основа снизу */
+  ); 
+  
+  /* 2. Усиливаем размытие (6px обычно маловато для «густого» стекла) */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); 
+  
+  /* 3. Тонкая светлая граница сверху (имитация грани стекла) */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  /* Остальные ваши стили без изменений */
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 750px;
+  position: relative;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+/* При наведении стекло может становиться чуть плотнее */
+.food-card:hover {
+  background: rgba(110, 110, 110, 0.5);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.food-img img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid var(--card-border);
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+  transition: transform 0.4s ease;
+  
+}
+
+.food-card:hover .food-img img {
+  transform: scale(1.05) rotate(3deg);
+}
+
+.food-details {
+  margin-left: 35px;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-title {
+  color: var(--gold-text);
+  font-family: 'Georgia', serif;
+  font-size: 1.8rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.food-ingredients {
+  color: #777;
+  font-size: 0.85rem;
+  margin: 8px 0 15px 0;
+  font-style: italic;
+}
+
+.food-info {
+  color: #bbb;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.food-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.food-price {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.buy-button {
+  background: var(--accent-red);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 10px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.buy-button:hover {
+  background: #a50000;
+  box-shadow: 0 0 15px rgba(139, 0, 0, 0.4);
+}
