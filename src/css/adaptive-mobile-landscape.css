@@ -172,7 +172,7 @@
 
     /* 4.3 Карточки блюд */
     .food-card {
-        width: 80%;
+        max-width: 80%;
     }
     
     .food-img img {
